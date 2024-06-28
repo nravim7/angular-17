@@ -7,4 +7,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-old-project';
+  msg = 'Hello, Welcome';
+  num1 = 5;
+  num2 = 10;
+  sum = this.num1 + this.num2;
+
+  inpulVal = 'Hello';
+
+  isDisabled = false;
+  imgSrc = './public/favicon.ico'
+
+  display(name: String) {
+    alert(name + 'Button is clicked')
+  }
+
+  counter = 0;
+  incr() {
+    this.counter++;
+  }
+
+  onKeyDown() {
+    console.log('Keyboard event is pressed')
+  }
+
+  onFocus() {
+    console.log('Focus event is triggered')
+  }
 }
