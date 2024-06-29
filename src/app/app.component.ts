@@ -11,6 +11,12 @@ export class AppComponent {
   num1 = 5;
   num2 = 10;
   sum = this.num1 + this.num2;
+  staicInput:string = '';
+  dynamicInput:string = '';
+  inputValue:string = '';
+  dynamicValue:string = '';
+
+  counterValue = 0;
 
   inpulVal = 'Hello';
 
@@ -32,5 +38,20 @@ export class AppComponent {
 
   onFocus() {
     console.log('Focus event is triggered')
+  }
+
+  isShift(event:any) {
+    if(event.shiftKey && event.key === 'Y') {
+    console.log('Shift + Y is pressed', event)
+    }
+  }
+
+  show() {
+    this.dynamicValue = this.inputValue;
+  }
+
+
+  counterMethod(type:string) {
+    type==='incr'?this.counterValue++ : this.counterValue--;
   }
 }

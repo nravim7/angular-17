@@ -18,3 +18,43 @@
 <h2 (keypress)="incr">Keyboard element - {{counter}}</h2>
 <hr>
 <input type="text" (focus)="onFocus()">
+
+<hr>
+
+<input type="text" (keydown)="isShift($event)">
+
+<hr>
+
+#two way binding
+<br>
+<input type="text" [(ngModel)]="staicInput" placeholder="Enter static input">
+<br>
+<input type="text" [(ngModel)]="dynamicInput" placeholder="Enter dynamic input">
+<h1>{{dynamicInput}}</h1>
+
+<hr>
+<br>
+#Assignment
+<br>
+<input type="text" [(ngModel)]="inputValue" placeholder="enter value here">
+<br>
+<button type="submit" (click)="show()">Show</button>
+<br>
+<h1>{{dynamicValue}}</h1>
+
+
+
+<br>
+<br>
+#counter example
+<br>
+<div class="container">
+<h1>Counter Example</h1>
+    <div class="btn-container">
+        <button (click)="counterMethod('decr')">--</button>
+        <p>{{counterValue}}</p>
+        <button (click)="counterMethod('incr')">++</button>
+    </div>
+</div>
+
+
